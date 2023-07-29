@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import FilterPane from "./FilterPane/FilterPane";
 import "./SearchResults.css"
+import { pseudoRandomBytes } from "crypto";
 
 interface Props {
 
@@ -43,8 +44,8 @@ const SearchResults: FC<Props> = () => {
     const [totalSelected, setTotalSelected] = useState<number>(0);
     const [filterTypes, setFilterTypes] = useState<string[]>([]);
     const [filterRating, setFilterRating] = useState<number[]>([]);
-    const [filterMinPrice, setFilterMinPrice] = useState<number>(0)
-    const [filterMaxPrice, setFilterMaxPrice] = useState<number>(0)
+    const [filterMinPrice, setFilterMinPrice] = useState<number>(0);
+    const [filterMaxPrice, setFilterMaxPrice] = useState<number>(0);
     
     const filterApplied = totalSelected !== 0;
 
@@ -88,13 +89,15 @@ const SearchResults: FC<Props> = () => {
         handleFilterApplied(event);
     }
 
+
+
     return (
         <>
         <Search data={data} />
         <div className="search-result-container">
             <FilterPane productTypes={productTypes} handleTypeChange={handleTypeChange} handleRatingChange={handleRatingChange} />
             <div className="product-card-container">
-                { filteredData.map((product, id) => <ProductCard product={product} key={id} />) }
+                { filteredData.map((product, id) => <ProductCard product={product} key={id} />) } 
             </div>
         </div>
         </>

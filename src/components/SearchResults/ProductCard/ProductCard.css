@@ -24,3 +24,49 @@
     width: 100%;
     object-fit: cover;
 }
+
+
+.product-card .img {
+    position: relative;
+}
+
+.product-card .img .view-more {
+    background-color: #00c7ff8f;
+    text-align: center;
+    padding: 1rem 0;
+    /* transform: translate(0, -100%); */
+    display: none;
+    /* position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: block; */
+}
+
+.product-card .img:hover .view-more {
+    position: absolute;
+    width: 100%;
+    bottom: 4px;
+    display: block;
+    color: white;
+    font-weight: 500;
+}
+
+.product-card .img:hover {
+    cursor: pointer;
+}
+
+.img .wishlist {
+    position: absolute;
+    right: 1rem;
+    top: 10px;
+
+}
+
+.img i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.img .selected i {
+    color: red !important;
+}
