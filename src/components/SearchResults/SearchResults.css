@@ -1,0 +1,13 @@
+.search-result-container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.product-card-container {
+    grid-column: 3 / 11;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

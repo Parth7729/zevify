@@ -1,0 +1,18 @@
+.suggestions-box {
+    /* margin-top: 1rem; */
+    background-color: white;
+    width: 94%;
+    padding: 0.25rem 1rem;
+    position: absolute;
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+
+.suggestions-box a {
+    text-decoration: none;
+    color: grey;
+}
+
+.suggestions-box a:hover {
+    color: black;
+}

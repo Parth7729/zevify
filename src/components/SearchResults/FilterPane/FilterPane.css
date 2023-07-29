@@ -1,0 +1,21 @@
+.filter-pane {
+    /* background-color: aliceblue; */
+    padding-top: 10px;
+    padding-left: 10px;
+    grid-column: 1 / 3;
+}
+
+.filter-pane .filter-type {
+    
+    border-bottom: 1px solid gray;
+}
+
+.filter-pane .filter-type > div{
+    width: 50%;
+    display: inline-flex;
+}
+
+.filter-type h1 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
